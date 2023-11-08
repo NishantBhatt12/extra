@@ -30,9 +30,10 @@ form {
 }
 
 /* Style section headings */
-h3 {
+form h3 {
     font-size: 20px;
-    color: #007BFF;
+    /* color: #007BFF; */
+    font-weight: bold;
     margin-top: 20px;
 }
 
@@ -40,7 +41,6 @@ h3 {
 label {
     display: block;
     margin: 10px 0;
-    font-weight: bold;
 }
 
 /* Style input fields and textareas */
