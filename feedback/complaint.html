@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty Evaluation Form</title>
+    <title>Student Complain Form</title>
     <link rel="stylesheet" type="text/css" href="form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/f840cfef0a.js" crossorigin="anonymous"></script>
@@ -117,7 +117,7 @@
     <nav class="navbar navbar-dark  fixed-top">
         <div class="container-fluid ">
             <a class="navbar-brand" href="#"><img src="https://nishantbhatt12.github.io/extra/images/logo.webp" alt="logo" height="50px" width="autoAuth"></a>
-            <h2>Student Feedback System</h2>
+            <h2>Student Complain Form</h2>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                 aria-label="Toggle navigation" onclick="closeNav()">
@@ -130,33 +130,11 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
-                <!-- <div class="offcanvas-body" id="btn_side">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">Feedback</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">Complaint</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">Suggestion</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/contact">Contact Us</a>
-                        </li>
-
-                </div> -->
                 <div id="mySidebar" class="sidebar">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
                     <a href="https://nishantbhatt12.github.io/extra">Profile</a>
                     <a href="https://nishantbhatt12.github.io/extra/feedback/Stu_feedback">Feedback</a>
-                    <a href="https://nishantbhatt12.github.io/extra/feedback/complaint">Complaint</a>
+                    <a href="https://nishantbhatt12.github.io/extra/feedback/complaint">Complain</a>
                     <a href="https://nishantbhatt12.github.io/extra/feedback/suggestion">Suggestion</a>
                 </div>
             </div>
@@ -165,15 +143,15 @@
     <!-- <h2>Faculty Evaluation Form</h2> -->
     <form action="submit_evaluation.php" method="post" onsubmit="return validateForm();">
         <!-- 1. General Information -->
-        <h3>1. General Information:</h3>
+        <h3>General Information:</h3>
         <label for="studentName">Student Name:</label>
-        <input type="text" name="studentName" id="studentName" required><br>
+        <input type="text" name="studentName" id="studentName" required>
         <small id="StudentName" style="color: red;"></small>
         <br>
         <!-- <label for="courseName">Course Name/Number:</label>
         <input type="text" name="courseName" id="courseName" required> -->
         <label for="enroll">Enrollment Number:</label>
-        <input type="number" name="enroll" id="enroll" required><br>
+        <input type="number" name="enroll" id="enroll" required>
         <small id="Enrollment" style="color: red;"></small>
         <br>
         <!-- <label for="semesterYear">Semester/Year:</label>
@@ -194,7 +172,7 @@
         </select>
         <small id="Sem-validation" style="color: red;"></small>
         <br>
-        <label for="University">Complaine:</label>
+        <label for="University"><h3>Complain:</h3></label>
         <select name="University" id="University" required onclick="none_display()">
             <option value=""><-- Select --></option>
             <option value="University">University</option>
@@ -203,11 +181,11 @@
         <small id="University-validation" style="color: red;"></small>
         <br>
         <div id="id1">
-            <label for="University_Complaine">Enter Your University Regarding Complaine:</label>
+            <label for="University_Complaine"><b>Enter Your University Regarding Complain:</b></label>
             <textarea name="University_Complaine" id="University_Complaine" rows="4" cols="50"></textarea>
         </div>
         <div id="id2">
-            <label for="Department_Complaine">Enter Your Department Regarding Complaine:</label>
+            <label for="Department_Complaine"><b>Enter Your Department Regarding Complain:</b></label>
             <textarea name="Department_Complaine" id="Department_Complaine" rows="4" cols="50"></textarea>
         </div>
         
@@ -276,8 +254,7 @@
     <footer>
         <div class="container">
             <div>
-                <p style="color: black;">All Rights Reserved. © <span style="color:#8D3131">SILVEROAK CAMPUS AND
-                        RESEARCH FOUNDATION</span>
+                <p style="color: black;">All Rights Reserved. © <span style="color:#8D3131">SOCET IT DEPARTMENT</span>
                 </p>
             </div>
             <div id="socials" class="float-right">
@@ -301,162 +278,5 @@
         </div>
     </footer>
 </body>
-<!-- <script>
-    let studentName = document.getElementById("studentName");
-    let StudentName = document.getElementById("StudentName");
-    let enroll = document.getElementById("enroll");
-    let Enrollment = document.getElementById("Enrollment");
-    let instructorName = document.getElementById("instructorName");
-    let InstructorName = document.getElementById("InstructorName");
-
-
-    studentName.addEventListener("blur", function (e) {
-        StudentName.innerHTML = "";
-        if (studentName.value == "" || studentName.value == null) {
-            StudentName.innerHTML = "()*Please Enter Your Name";
-        }
-        else {
-            let SN = /^([a-zA-Z]{2,20})$/;
-            if (!SN.test(studentName.value)) {
-                StudentName.innerHTML = "Invalid Input";
-            }
-        }
-    });
-
-    studentName.addEventListener("keypress", function (e) {
-        StudentName.innerHTML = "";
-        let SN = ((e.which >= 65 && e.which <= 90) || (e.which >= 97 && e.which <= 121));
-        if (SN == false) {
-            StudentName.innerHTML = "Invalid Input";
-        }
-    });
-
-
-    enroll.addEventListener("blur", function (e) {
-        Enrollment.innerHTML = "";
-        if (enroll.value == "" || enroll.value == null) {
-            Enrollment.innerHTML = "()*Please Enter Your Enrollment Number";
-        }
-        else {
-            //FN = ((e.which >= 65 && e.which <= 90) || (e.which >= 97 && e.which <= 121));
-            let EN = /^([0-9]{13})$/;
-            if (!EN.test(enroll.value)) {
-                Enrollment.innerHTML = "Invalid Input";
-            }
-        }
-    });
-
-    enroll.addEventListener("keypress", function (e) {
-        Enrollment.innerHTML = "";
-        let EN = (e.which >= 48 && e.which <= 57);
-        if (EN == false) {
-            Enrollment.innerHTML = "Invalid Input";
-        }
-    });
-
-    instructorName.addEventListener("blur", function (e) {
-        InstructorName.innerHTML = "";
-        if (instructorName.value == "" || instructorName.value == null) {
-            InstructorName.innerHTML = "()*Please Enter Your Instructor-Name";
-        }
-        else {
-            let IN = /^([a-zA-Z]{2,20})$/;
-            if (!IN.test(instructorName.value)) {
-                InstructorName.innerHTML = "Invalid Input";
-            }
-        }
-    });
-
-    instructorName.addEventListener("keypress", function (e) {
-        InstructorName.innerHTML = "";
-        let IN = ((e.which >= 65 && e.which <= 90) || (e.which >= 97 && e.which <= 121));
-        if (IN == false) {
-            InstructorName.innerHTML = "Invalid Input";
-        }
-    });
-
-    function validateSelect(selectId) {
-        const selectElement = document.getElementById(selectId);
-        const smallTag = document.getElementById(`${selectId}-validation`);
-
-        if (selectElement.value === "") {
-            smallTag.innerText = "()*Please make a selection.";
-            return false; // Return false to prevent form submission
-        } else {
-            smallTag.innerText = ""; // Clear the validation message when a selection is made.
-            return true; // Allow form submission
-        }
-    }
-    document.getElementById("submit-button").addEventListener("click", function (event) {
-        // Prevent the default form submission behavior
-        StudentName.innerHTML = "";
-        if (studentName.value === "" || studentName.value === null) {
-            StudentName.innerHTML = "()* Your  Name Required";
-            Sn = false;
-        } else {
-            var SN = /^([a-zA-Z]{2,20})$/;
-            if (!SN.test(studentName.value)) {
-                StudentName.innerHTML = "Invalid Input";
-                Sn = false;
-            } else {
-                Sn = true;
-            }
-        }
-
-        InstructorName.innerHTML = "";
-        if (instructorName.value === "" || instructorName.value === null) {
-            InstructorName.innerHTML = "()* Your  Instructor-Name Required";
-            In = false;
-        } else {
-            var IN = /^([a-zA-Z]{2,20})$/;
-            if (!IN.test(instructorName.value)) {
-                InstructorName.innerHTML = "Invalid Input";
-                In = false;
-            } else {
-                In = true;
-            }
-        }
-
-        Enrollment.innerHTML = "";
-        if (enroll.value === "" || enroll.value === null) {
-            Enrollment.innerHTML = "()* Your  Instructor-Name Required";
-            En = false;
-        } else {
-            var EN =  /^([0-9]{13})$/;
-            if (!EN.test(enroll.value)) {
-                Enrollment.innerHTML = "Invalid Input";
-                En = false;
-            } else {
-                En = true;
-            }
-        }
-        event.preventDefault();
-
-        // Validate all select elements
-        const knowledgeSubjectValid = validateSelect('knowledgeSubject');
-        const adequacyLabResourcesValid = validateSelect('adequacyLabResources');
-        const clarityExplanation = validateSelect('clarityExplanation');
-        const Teaching = validateSelect('Teaching');
-        const Responsiveness = validateSelect('Responsiveness');
-        const Resources = validateSelect('Resources');
-        const Lab = validateSelect('Lab');
-        const Safety = validateSelect('Safety');
-        const Assistance = validateSelect('Assistance');
-        const relevanceLecturesValid = validateSelect('relevanceLectures');
-        const Clarity = validateSelect('Clarity');
-        const Interaction = validateSelect('Interaction');
-        const Time = validateSelect('Time');
-        const Year = validateSelect('Year');
-        const Sem = validateSelect('Sem');
-
-        // Only allow form submission if all select elements are valid
-        if (knowledgeSubjectValid && adequacyLabResourcesValid && relevanceLecturesValid && clarityExplanation && Teaching && Responsiveness && Resources && Lab && Safety && Assistance && Clarity && Interaction && Time && Year && Sem && Sn && En && In) {
-            // Submit the form
-            document.getElementById("your-form-id").submit();
-        } else {
-            alert('Please complete all evaluation criteria before submitting.');
-        }
-    });
-</script> -->
 
 </html>
