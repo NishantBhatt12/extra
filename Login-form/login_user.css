@@ -1,0 +1,83 @@
+.login-container {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 20px;
+    width: 350px;
+    margin: auto;
+    margin-top: 140px;
+    margin-bottom: 90px;
+}
+
+.login-container h1 {
+    margin: 0;
+    color: #333;
+}
+
+.login-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background: #0056b3;
+}
+
+.login-container p {
+    margin: 10px 0;
+}
+#captchaCode{
+    display: inline;
+    width: 80%;
+    text-decoration: line-through;
+}
+#refreshButton{
+    background-color: #333;
+    display: inline;
+    width: 10%;
+}
+
+/* Header */
+nav {
+    background-color: silver;
+    /* Set your desired background color */
+    color: #000000;
+    /* Set your desired text color */
+    padding: 10px 0;
+    /* Adjust padding as needed */
+}
+
+button{
+    display: none;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Footer */
+
+footer {
+    background-color: silver;
+    /* Set your desired background color */
+    color: #000000;
+    /* Set your desired text color */
+    padding: 10px 0;
+    /* Adjust padding as needed */
+}

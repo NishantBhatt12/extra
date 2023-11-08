@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: silver;
+    /* Set your desired background color */
+    color: #000000;
+    /* Set your desired text color */
+    padding: 10px 0;
+    /* Adjust padding as needed */
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.sidebar #btn_side {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.links li {
+    margin-right: 20px;
+    /* Adjust the spacing between links as needed */
+}
+
+.title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    width: 60%;
+    height: 10vh;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.title>h1 {
+    margin: 10px;
+}
+
+.m-container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    width: 60%;
+    margin: auto;
+}
+
+.basic-details {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+}
+
+#profile-pic {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.basic-details>h4 {
+    margin-top: 0;
+}
+
+.extensive-details {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.extensive-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.extensive-item>h1 {
+    font-size: 22px;
+    margin: 12px;
+}
+
+@media screen and (max-width:420px) and (min-width : 320px) {
+    .title {
+        width: 90%;
+    }
+
+    .title>h1 {
+        font-size: 20px;
+    }
+
+    .m-container {
+        width: 90%;
+        grid-template-columns: auto;
+    }
+
+    .extensive-item>h1 {
+        font-size: 15px;
+    }
+}
+
+footer {
+    background-color: silver;
+    /* Set your desired background color */
+    color: #000000;
+    /* Set your desired text color */
+    padding: 10px 0;
+    /* Adjust padding as needed */
+}

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Evaluation Form</title>
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/f840cfef0a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <style>
+        nav {
+            background-color: silver;
+            /* Set your desired background color */
+            color: #000000;
+            /* Set your desired text color */
+            padding: 10px 0;
+            /* Adjust padding as needed */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1420px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .sidebar #btn_side {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .links ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .links li {
+            margin-right: 20px;
+            /* Adjust the spacing between links as needed */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                /* flex-direction: column; */
+                /* align-items: flex-start; */
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+                /* Add space between logo and links on small screens */
+            }
+
+            .links ul {
+                list-style: none;
+                display: -webkit-inline-box;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        footer {
+            background-color: silver;
+            /* Set your desired background color */
+            color: #000000;
+            /* Set your desired text color */
+            padding: 10px 0;
+            /* Adjust padding as needed */
+        }
+        #id1,#id2{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark  fixed-top">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="#"><img src="https://nishantbhatt12.github.io/extra/images/logo.webp" alt="logo" height="50px" width="autoAuth"></a>
+            <h2>Student Feedback System</h2>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation" onclick="closeNav()">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <span class=""><i class="fa-solid fa-bars" style="color: #000000;"></i></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <!-- <div class="offcanvas-body" id="btn_side">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">Feedback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">Complaint</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">Suggestion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/contact">Contact Us</a>
+                        </li>
+
+                </div> -->
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
+                    <a href="https://nishantbhatt12.github.io/extra">Profile</a>
+                    <a href="https://nishantbhatt12.github.io/extra/feedback/Stu_feedback">Feedback</a>
+                    <a href="https://nishantbhatt12.github.io/extra/feedback/complaint">Complaint</a>
+                    <a href="https://nishantbhatt12.github.io/extra/feedback/suggestion">Suggestion</a>
+                </div>
+            </div>
+        </div>
+    </nav><br><br><br><br>
+    <!-- <h2>Faculty Evaluation Form</h2> -->
+    <form action="submit_evaluation.php" method="post" onsubmit="return validateForm();">
+        <!-- 1. General Information -->
+        <h3>1. General Information:</h3>
+        <label for="studentName">Student Name:</label>
+        <input type="text" name="studentName" id="studentName" required><br>
+        <small id="StudentName" style="color: red;"></small>
+        <br>
+        <!-- <label for="courseName">Course Name/Number:</label>
+        <input type="text" name="courseName" id="courseName" required> -->
+        <label for="enroll">Enrollment Number:</label>
+        <input type="number" name="enroll" id="enroll" required><br>
+        <small id="Enrollment" style="color: red;"></small>
+        <br>
+        <!-- <label for="semesterYear">Semester/Year:</label>
+        <input type="text" name="semesterYear" id="semesterYear" required> -->
+        <label for="Year">Year:</label>
+        <select name="Year" id="Year" onchange="updateSemesters()" required>
+            <option value=""><-- Select --></option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select> 
+        <small id="Year-validation" style="color: red;"></small>
+        <br>
+        <label for="Sem">Semester:</label>
+        <select name="Sem" id="Sem" required>
+            <option value=""><-- Select --></option>
+        </select>
+        <small id="Sem-validation" style="color: red;"></small>
+        <br>
+        <label for="University">Complaine:</label>
+        <select name="University" id="University" required onclick="none_display()">
+            <option value=""><-- Select --></option>
+            <option value="University">University</option>
+            <option value="Department">Department</option>
+        </select>
+        <small id="University-validation" style="color: red;"></small>
+        <br>
+        <div id="id1">
+            <label for="University_Complaine">Enter Your University Regarding Complaine:</label>
+            <textarea name="University_Complaine" id="University_Complaine" rows="4" cols="50"></textarea>
+        </div>
+        <div id="id2">
+            <label for="Department_Complaine">Enter Your Department Regarding Complaine:</label>
+            <textarea name="Department_Complaine" id="Department_Complaine" rows="4" cols="50"></textarea>
+        </div>
+        
+        <script>
+            let University = document.getElementById("University");
+            let Div1=document.getElementById('id1');
+            let Div2=document.getElementById('id2');
+            
+            
+            function none_display(){
+                if(University.value === "University")
+                {
+                    Div1.style.display='block';
+                    Div2.style.display='none';
+                    // document.Div1.style.display="block";
+                }else if(University.value === "Department")
+                {
+                    
+                    Div1.style.display="none";
+                    Div2.style.display="block";
+                    // document.Div2.style.display="block";
+                }
+            }
+
+            function updateSemesters() {
+                var yearSelect = document.getElementById("Year");
+                var semSelect = document.getElementById("Sem");
+
+                // Clear existing options
+                while (semSelect.options.length > 1) {
+                    semSelect.remove(1);
+                }
+
+                // Get the selected year
+                var selectedYear = yearSelect.value;
+
+                if (selectedYear === "1") {
+                    // Add options for semester 1 and 2
+                    semSelect.options.add(new Option("1", "1"));
+                    semSelect.options.add(new Option("2", "2"));
+                } else if (selectedYear === "2") {
+                    // Add options for semester 3 and 4
+                    semSelect.options.add(new Option("3", "3"));
+                    semSelect.options.add(new Option("4", "4"));
+                } else if (selectedYear === "3") {
+                    // Add options for semester 5 and 6
+                    semSelect.options.add(new Option("5", "5"));
+                    semSelect.options.add(new Option("6", "6"));
+                } else if (selectedYear === "4") {
+                    // Add options for semester 7 and 8
+                    semSelect.options.add(new Option("7", "7"));
+                    semSelect.options.add(new Option("8", "8"));
+                }
+            }
+        </script>
+        <br>
+        
+
+        <!-- 7. Submit Button -->
+        <center><input type="submit" value="Submit" id="submit-button">
+            <input type="reset" value="Reset">
+        </center>
+        <!-- <button value="reset">Reset</button> -->
+    </form>
+    <br>
+    <footer>
+        <div class="container">
+            <div>
+                <p style="color: black;">All Rights Reserved. © <span style="color:#8D3131">SILVEROAK CAMPUS AND
+                        RESEARCH FOUNDATION</span>
+                </p>
+            </div>
+            <div id="socials" class="float-right">
+                <a href="https://facebook.com/silveroakuniversityofficial" target="_blank">
+                    <i style="color:#3B579D" class="fa fa-lg mx-1 fa-facebook-square" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com/SilverOakUni" target="_blank">
+                    <i style="color:#40B6F1" class="fa fa-lg mx-1 fa-twitter-square" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com/silveroakuni/" target="_blank">
+                    <i style="color:#D42375" class="fa fa-lg mx-1 fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/school/silveroakuni/" target="_blank">
+                    <i style="color:#2C74B3" class="fa fa-lg mx-1 fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://youtube.com/@SilverOakUni" target="_blank">
+                    <i style="color:#FF0000" class="fa fa-lg mx-1 fa-youtube" aria-hidden="true"></i>
+                </a>
+
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- <script>
+    let studentName = document.getElementById("studentName");
+    let StudentName = document.getElementById("StudentName");
+    let enroll = document.getElementById("enroll");
+    let Enrollment = document.getElementById("Enrollment");
+    let instructorName = document.getElementById("instructorName");
+    let InstructorName = document.getElementById("InstructorName");
+
+
+    studentName.addEventListener("blur", function (e) {
+        StudentName.innerHTML = "";
+        if (studentName.value == "" || studentName.value == null) {
+            StudentName.innerHTML = "()*Please Enter Your Name";
+        }
+        else {
+            let SN = /^([a-zA-Z]{2,20})$/;
+            if (!SN.test(studentName.value)) {
+                StudentName.innerHTML = "Invalid Input";
+            }
+        }
+    });
+
+    studentName.addEventListener("keypress", function (e) {
+        StudentName.innerHTML = "";
+        let SN = ((e.which >= 65 && e.which <= 90) || (e.which >= 97 && e.which <= 121));
+        if (SN == false) {
+            StudentName.innerHTML = "Invalid Input";
+        }
+    });
+
+
+    enroll.addEventListener("blur", function (e) {
+        Enrollment.innerHTML = "";
+        if (enroll.value == "" || enroll.value == null) {
+            Enrollment.innerHTML = "()*Please Enter Your Enrollment Number";
+        }
+        else {
+            //FN = ((e.which >= 65 && e.which <= 90) || (e.which >= 97 && e.which <= 121));
+            let EN = /^([0-9]{13})$/;
+            if (!EN.test(enroll.value)) {
+                Enrollment.innerHTML = "Invalid Input";
+            }
+        }
+    });
+
+    enroll.addEventListener("keypress", function (e) {
+        Enrollment.innerHTML = "";
+        let EN = (e.which >= 48 && e.which <= 57);
+        if (EN == false) {
+            Enrollment.innerHTML = "Invalid Input";
+        }
+    });
+
+    instructorName.addEventListener("blur", function (e) {
+        InstructorName.innerHTML = "";
+        if (instructorName.value == "" || instructorName.value == null) {
+            InstructorName.innerHTML = "()*Please Enter Your Instructor-Name";
+        }
+        else {
+            let IN = /^([a-zA-Z]{2,20})$/;
+            if (!IN.test(instructorName.value)) {
+                InstructorName.innerHTML = "Invalid Input";
+            }
+        }
+    });
+
+    instructorName.addEventListener("keypress", function (e) {
+        InstructorName.innerHTML = "";
+        let IN = ((e.which >= 65 && e.which <= 90) || (e.which >= 97 && e.which <= 121));
+        if (IN == false) {
+            InstructorName.innerHTML = "Invalid Input";
+        }
+    });
+
+    function validateSelect(selectId) {
+        const selectElement = document.getElementById(selectId);
+        const smallTag = document.getElementById(`${selectId}-validation`);
+
+        if (selectElement.value === "") {
+            smallTag.innerText = "()*Please make a selection.";
+            return false; // Return false to prevent form submission
+        } else {
+            smallTag.innerText = ""; // Clear the validation message when a selection is made.
+            return true; // Allow form submission
+        }
+    }
+    document.getElementById("submit-button").addEventListener("click", function (event) {
+        // Prevent the default form submission behavior
+        StudentName.innerHTML = "";
+        if (studentName.value === "" || studentName.value === null) {
+            StudentName.innerHTML = "()* Your  Name Required";
+            Sn = false;
+        } else {
+            var SN = /^([a-zA-Z]{2,20})$/;
+            if (!SN.test(studentName.value)) {
+                StudentName.innerHTML = "Invalid Input";
+                Sn = false;
+            } else {
+                Sn = true;
+            }
+        }
+
+        InstructorName.innerHTML = "";
+        if (instructorName.value === "" || instructorName.value === null) {
+            InstructorName.innerHTML = "()* Your  Instructor-Name Required";
+            In = false;
+        } else {
+            var IN = /^([a-zA-Z]{2,20})$/;
+            if (!IN.test(instructorName.value)) {
+                InstructorName.innerHTML = "Invalid Input";
+                In = false;
+            } else {
+                In = true;
+            }
+        }
+
+        Enrollment.innerHTML = "";
+        if (enroll.value === "" || enroll.value === null) {
+            Enrollment.innerHTML = "()* Your  Instructor-Name Required";
+            En = false;
+        } else {
+            var EN =  /^([0-9]{13})$/;
+            if (!EN.test(enroll.value)) {
+                Enrollment.innerHTML = "Invalid Input";
+                En = false;
+            } else {
+                En = true;
+            }
+        }
+        event.preventDefault();
+
+        // Validate all select elements
+        const knowledgeSubjectValid = validateSelect('knowledgeSubject');
+        const adequacyLabResourcesValid = validateSelect('adequacyLabResources');
+        const clarityExplanation = validateSelect('clarityExplanation');
+        const Teaching = validateSelect('Teaching');
+        const Responsiveness = validateSelect('Responsiveness');
+        const Resources = validateSelect('Resources');
+        const Lab = validateSelect('Lab');
+        const Safety = validateSelect('Safety');
+        const Assistance = validateSelect('Assistance');
+        const relevanceLecturesValid = validateSelect('relevanceLectures');
+        const Clarity = validateSelect('Clarity');
+        const Interaction = validateSelect('Interaction');
+        const Time = validateSelect('Time');
+        const Year = validateSelect('Year');
+        const Sem = validateSelect('Sem');
+
+        // Only allow form submission if all select elements are valid
+        if (knowledgeSubjectValid && adequacyLabResourcesValid && relevanceLecturesValid && clarityExplanation && Teaching && Responsiveness && Resources && Lab && Safety && Assistance && Clarity && Interaction && Time && Year && Sem && Sn && En && In) {
+            // Submit the form
+            document.getElementById("your-form-id").submit();
+        } else {
+            alert('Please complete all evaluation criteria before submitting.');
+        }
+    });
+</script> -->
+
+</html>

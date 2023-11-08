@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Evaluation Form</title>
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/f840cfef0a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <style>
+        nav {
+            background-color: silver;
+            /* Set your desired background color */
+            color: #000000;
+            /* Set your desired text color */
+            padding: 10px 0;
+            /* Adjust padding as needed */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1420px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .sidebar #btn_side {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .links ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .links li {
+            margin-right: 20px;
+            /* Adjust the spacing between links as needed */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                /* flex-direction: column; */
+                /* align-items: flex-start; */
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+                /* Add space between logo and links on small screens */
+            }
+
+            .links ul {
+                list-style: none;
+                display: -webkit-inline-box;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        footer {
+            background-color: silver;
+            /* Set your desired background color */
+            color: #000000;
+            /* Set your desired text color */
+            padding: 10px 0;
+            /* Adjust padding as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark  fixed-top">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="#"><img src="https://nishantbhatt12.github.io/extra/images/logo.webp" alt="logo" height="50px" width="autoAuth"></a>
+            <h2>Student Feedback System</h2>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation" onclick="closeNav()">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <span class=""><i class="fa-solid fa-bars" style="color: #000000;"></i></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <!-- <div class="offcanvas-body" id="btn_side">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">Feedback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">Complaint</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">Suggestion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://www.silveroakuni.ac.in/contact">Contact Us</a>
+                        </li>
+
+                </div> -->
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
+                    <a href="https://nishantbhatt12.github.io/extra">Profile</a>
+                    <a href="https://nishantbhatt12.github.io/extra/feedback/Stu_feedback">Feedback</a>
+                    <a href="https://nishantbhatt12.github.io/extra/feedback/complaint">Complaint</a>
+                    <a href="https://nishantbhatt12.github.io/extra/feedback/suggestion">Suggestion</a>
+                </div>
+            </div>
+        </div>
+    </nav><br><br><br><br>
+    <!-- <h2>Faculty Evaluation Form</h2> -->
+    <form action="submit_evaluation.php" method="post">
+        <!-- 1. General Information -->
+        <h3>1. General Information:</h3>
+        <label for="studentName">Student Name:</label>
+        <input type="text" name="studentName" id="studentName" required>
+        <br>
+        <!-- <label for="courseName">Course Name/Number:</label>
+        <input type="text" name="courseName" id="courseName" required> -->
+        <label for="enroll">Enrollment Number:</label>
+        <input type="number" name="enroll" id="enroll" required>
+        <br>
+        <!-- <label for="semesterYear">Semester/Year:</label>
+        <input type="text" name="semesterYear" id="semesterYear" required> -->
+        <label for="Year">Year:</label>
+        <select name="Year" id="Year" onchange="updateSemesters()" required>
+            <option value=""><-- Select --></option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select>
+        <label for="Sem">Semester:</label>
+        <select name="Sem" id="Sem" required>
+            <option value=""><-- Select --></option>
+        </select>
+        <script>
+            function updateSemesters() {
+                var yearSelect = document.getElementById("Year");
+                var semSelect = document.getElementById("Sem");
+                
+                // Clear existing options
+                while (semSelect.options.length > 1) {
+                    semSelect.remove(1);
+                }
+                
+                // Get the selected year
+                var selectedYear = yearSelect.value;
+                
+                if (selectedYear === "1") {
+                    // Add options for semester 1 and 2
+                    semSelect.options.add(new Option("1", "1"));
+                    semSelect.options.add(new Option("2", "2"));
+                } else if (selectedYear === "2") {
+                    // Add options for semester 3 and 4
+                    semSelect.options.add(new Option("3", "3"));
+                    semSelect.options.add(new Option("4", "4"));
+                } else if (selectedYear === "3") {
+                    // Add options for semester 5 and 6
+                    semSelect.options.add(new Option("5", "5"));
+                    semSelect.options.add(new Option("6", "6"));
+                } else if (selectedYear === "4") {
+                    // Add options for semester 7 and 8
+                    semSelect.options.add(new Option("7", "7"));
+                    semSelect.options.add(new Option("8", "8"));
+                }
+            }
+            </script>
+        <br>
+        <label for="instructorName">Instructor's Name:</label>
+        <input type="text" name="instructorName" id="instructorName" required>
+        <br>
+        <label for="labAssistantName">Lab Assistant's Name (if applicable):</label>
+        <input type="text" name="labAssistantName" id="labAssistantName">
+        <br>
+
+        <!-- 2. Faculty Evaluation -->
+        <h3>2. Faculty Evaluation:</h3>
+        <p>Please rate each criterion on a scale from 1 (Poor) to 5 (Excellent).</p>
+
+        <!-- Replace radio buttons with select dropdowns for each criterion -->
+        <div class="evaluation-criteria">
+            <label for="knowledgeSubject">Knowledge of the Subject Matter:</label>
+            <select name="knowledgeSubject" id="knowledgeSubject">
+                <option value=""><-- Select --></option>
+                <option value="5">5 (Excellent)</option>
+                <option value="4">4 (Very Good)</option>
+                <option value="3">3 (Good)</option>
+                <option value="2">2 (Fair)</option>
+                <option value="1">1 (Poor)</option>
+            </select>
+        </div>
+        
+        <div class="evaluation-criteria">
+            <label for="clarityExplanation">Clarity in Explanation:</label>
+            <select name="knowledgeSubject" id="knowledgeSubject">
+                <option value=""><-- Select --></option>
+                <option value="5">5 (Excellent)</option>
+                <option value="4">4 (Very Good)</option>
+                <option value="3">3 (Good)</option>
+                <option value="2">2 (Fair)</option>
+                <option value="1">1 (Poor)</option>
+            </select>
+        </div>
+        
+        <div class="evaluation-criteria">
+            <label for="clarityExplanation">Teaching Methods and Techniques:</label>
+            <select name="knowledgeSubject" id="knowledgeSubject">
+                <option value=""><-- Select --></option>
+                <option value="5">5 (Excellent)</option>
+                <option value="4">4 (Very Good)</option>
+                <option value="3">3 (Good)</option>
+                <option value="2">2 (Fair)</option>
+                <option value="1">1 (Poor)</option>
+            </select>
+        </div>
+        
+        <div class="evaluation-criteria">
+            <label for="clarityExplanation">Responsiveness to Student Questions:</label>
+            <select name="knowledgeSubject" id="knowledgeSubject">
+                <option value=""><-- Select --></option>
+                <option value="5">5 (Excellent)</option>
+                <option value="4">4 (Very Good)</option>
+                <option value="3">3 (Good)</option>
+                <option value="2">2 (Fair)</option>
+                <option value="1">1 (Poor)</option>
+            </select>
+        </div>
+        
+        <div class="evaluation-criteria">
+            <label for="clarityExplanation">Use of Technology and Resources:</label>
+            <select name="knowledgeSubject" id="knowledgeSubject">
+                <option value=""><-- Select --></option>
+                <option value="5">5 (Excellent)</option>
+                <option value="4">4 (Very Good)</option>
+                <option value="3">3 (Good)</option>
+                <option value="2">2 (Fair)</option>
+                <option value="1">1 (Poor)</option>
+            </select>
+        </div>
+        
+        <!-- Repeat this structure for each evaluation criterion -->
+        
+        <!-- 3. Lab Sessions Evaluation -->
+        <h3>3. Lab Sessions Evaluation:</h3>
+        <p>Please rate each criterion on a scale from 1 (Poor) to 5 (Excellent).</p>
+        
+        <!-- Replace radio buttons with select dropdowns for each criterion -->
+        <div class="evaluation-criteria">
+            <label for="adequacyLabResources">Adequacy of Lab Resources and Equipment:</label>
+            <select name="adequacyLabResources" id="adequacyLabResources">
+                <option value=""><-- Select --></option>
+                <option value="5">5 (Excellent)</option>
+                <option value="4">4 (Very Good)</option>
+                <option value="3">3 (Good)</option>
+                <option value="2">2 (Fair)</option>
+                <option value="1">1 (Poor)</option>
+            </select>
+        </div>
+        
+        <div class="evaluation-criteria">
+            <label for="adequacyLabResources">Lab Environment (cleanliness, organization):</label>
+            <select name="adequacyLabResources" id="adequacyLabResources">
+                <option value=""><-- Select --></option>
+                <option value="5">5 (Excellent)</option>
+                <option value="4">4 (Very Good)</option>
+                <option value="3">3 (Good)</option>
+                <option value="2">2 (Fair)</option>
+                <option value="1">1 (Poor)</option>
+            </select>
+        </div>
+        
+        <div class="evaluation-criteria">
+            <label for="adequacyLabResources">Lab Safety Measures:</label>
+            <select name="adequacyLabResources" id="adequacyLabResources">
+                <option value=""><-- Select --></option>
+                <option value="5">5 (Excellent)</option>
+                <option value="4">4 (Very Good)</option>
+                <option value="3">3 (Good)</option>
+                <option value="2">2 (Fair)</option>
+                <option value="1">1 (Poor)</option>
+            </select>
+        </div>
+        
+        <div class="evaluation-criteria">
+            <label for="adequacyLabResources">Assistance and Support from Lab Assistants:</label>
+            <select name="adequacyLabResources" id="adequacyLabResources">
+                <option value=""><-- Select --></option>
+                <option value="5">5 (Excellent)</option>
+                <option value="4">4 (Very Good)</option>
+                <option value="3">3 (Good)</option>
+                <option value="2">2 (Fair)</option>
+                <option value="1">1 (Poor)</option>
+            </select>
+        </div>
+        
+        <!-- Repeat this structure for other lab criteria -->
+        
+        <!-- 4. Lecture Evaluation -->
+        <h3>4. Lecture Evaluation:</h3>
+        <p>Please rate each criterion on a scale from 1 (Poor) to 5 (Excellent).</p>
+        
+        <!-- Replace radio buttons with select dropdowns for each criterion -->
+        <div class="evaluation-criteria">
+            <label for="relevanceLectures">Relevance of Lectures to Course Content:</label>
+            <select name="relevanceLectures" id="relevanceLectures">
+                <option value=""><-- Select --></option>
+                <option value="5">5 (Excellent)</option>
+                <option value="4">4 (Very Good)</option>
+                <option value="3">3 (Good)</option>
+                <option value="2">2 (Fair)</option>
+                <option value="1">1 (Poor)</option>
+            </select>
+        </div>
+        
+        <div class="evaluation-criteria">
+            <label for="relevanceLectures">Clarity of Presentation:</label>
+            <select name="relevanceLectures" id="relevanceLectures">
+                <option value=""><-- Select --></option>
+                <option value="5">5 (Excellent)</option>
+                <option value="4">4 (Very Good)</option>
+                <option value="3">3 (Good)</option>
+                <option value="2">2 (Fair)</option>
+                <option value="1">1 (Poor)</option>
+            </select>
+        </div>
+        <div class="evaluation-criteria">
+            <label for="relevanceLectures">Interaction with Students:</label>
+            <select name="relevanceLectures" id="relevanceLectures">
+                <option value=""><-- Select --></option>
+                <option value="5">5 (Excellent)</option>
+                <option value="4">4 (Very Good)</option>
+                <option value="3">3 (Good)</option>
+                <option value="2">2 (Fair)</option>
+                <option value="1">1 (Poor)</option>
+            </select>
+        </div>
+        <div class="evaluation-criteria">
+            <label for="relevanceLectures">Time Management:</label>
+            <select name="relevanceLectures" id="relevanceLectures">
+                <option value=""><-- Select --></option>
+                <option value="5">5 (Excellent)</option>
+                <option value="4">4 (Very Good)</option>
+                <option value="3">3 (Good)</option>
+                <option value="2">2 (Fair)</option>
+                <option value="1">1 (Poor)</option>
+            </select>
+        </div>
+
+        <!-- Repeat this structure for other lecture criteria -->
+
+        <!-- 5. Overall Experience -->
+        <h3>5. Overall Experience:</h3>
+
+        <!-- Replace radio buttons with select dropdown for overall satisfaction -->
+        <div class="evaluation-criteria">
+            <label for="overallSatisfaction">Overall Satisfaction with the IT Department Faculty:</label>
+            <div class="container">
+                <div class="star-width">
+                    <!-- <h1 id="text">Rate Us <span>*</span></h1> -->
+                    <input type="radio" name="rate" id="rate-5" required>
+                    <label for="rate-5" class="fa fa-star"></label>
+                    <input type="radio" name="rate" id="rate-4">
+                    <label for="rate-4" class="fa fa-star"></label>
+                    <input type="radio" name="rate" id="rate-3">
+                    <label for="rate-3" class="fa fa-star"></label>
+                    <input type="radio" name="rate" id="rate-2">
+                    <label for="rate-2" class="fa fa-star"></label>
+                    <input type="radio" name="rate" id="rate-1">
+                    <label for="rate-1" class="fa fa-star"></label>
+                    <header></header>
+                </div>
+            </div>
+        </div>
+
+        <!-- Suggestions for Improvement (if needed) -->
+        <div class="evaluation-criteria">
+            <label for="improvementSuggestions">Suggestions for Improvement:</label>
+            <textarea name="improvementSuggestions" id="improvementSuggestions" rows="4" cols="50"></textarea>
+        </div>
+
+        <!-- Most Effective Teaching/Lab Techniques (optional) -->
+        <div class="evaluation-criteria">
+            <label for="effectiveTechniques">Most Effective Teaching/Lab Techniques (optional):</label>
+            <textarea name="effectiveTechniques" id="effectiveTechniques" rows="4" cols="50"></textarea>
+        </div>
+
+        <!-- 6. Additional Comments -->
+        <h3>6. Additional Comments:</h3>
+        <label for="additionalComments">Comments/Suggestions:</label>
+        <textarea name="additionalComments" id="additionalComments" rows="4" cols="50"></textarea>
+        <br>
+        <br>
+
+        <!-- 7. Submit Button -->
+        <center><input type="submit" value="Submit">
+        <input type="reset" value="Reset"></center>
+        <!-- <button value="reset">Reset</button> -->
+    </form>
+    <footer>
+        <div class="container">
+            <div>
+                <p style="color: black;">All Rights Reserved. © <span style="color:#8D3131">SILVEROAK CAMPUS AND
+                        RESEARCH FOUNDATION</span>
+                </p>
+            </div>
+            <div id="socials" class="float-right">
+                <a href="https://facebook.com/silveroakuniversityofficial" target="_blank">
+                    <i style="color:#3B579D" class="fa fa-lg mx-1 fa-facebook-square" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com/SilverOakUni" target="_blank">
+                    <i style="color:#40B6F1" class="fa fa-lg mx-1 fa-twitter-square" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com/silveroakuni/" target="_blank">
+                    <i style="color:#D42375" class="fa fa-lg mx-1 fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/school/silveroakuni/" target="_blank">
+                    <i style="color:#2C74B3" class="fa fa-lg mx-1 fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://youtube.com/@SilverOakUni" target="_blank">
+                    <i style="color:#FF0000" class="fa fa-lg mx-1 fa-youtube" aria-hidden="true"></i>
+                </a>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

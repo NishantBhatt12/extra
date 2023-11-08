@@ -1,0 +1,190 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #007BFF;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #999;
+}
+
+/* Style section headings */
+h3 {
+    font-size: 20px;
+    color: #007BFF;
+    margin-top: 20px;
+}
+
+/* Style labels */
+label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Style input fields and textareas */
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style the rating input */
+/* input[type="number"] {
+    width: 60px;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+} */
+
+/* Style the submit button */
+input[type="submit"],
+input[type="reset"] {
+    /* background-color: #cfcfd5; */
+    background-color: silver;
+    color: #000000;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Style the optional textarea */
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Highlight input fields on focus */
+input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+    border: 1px solid #007BFF;
+}
+
+/* Style the star rating container */
+.star-rating {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Hide radio buttons */
+/* .star-rating input[type="radio"] { */
+    /* display: none; */
+/* } */
+
+/* Style the star icons */
+.star-rating label {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Style the selected star */
+.star-rating input[type="radio"]:checked + label {
+    color: #FFD700; /* Set the color to gold or your preferred color */
+}
+
+
+.evaluation-criteria .star-width input {
+    display: none;
+}
+
+.star-width label {
+    color: black;
+    font-size: 40px;
+    padding: 5px;
+    float: right;
+}
+
+/* DropDowns */
+select{
+    width: 100%;
+    height: 38px;
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* STAR RATE US */
+#text{
+    text-align: center;
+}
+.container{
+    display: flex;
+    align-items: flex-start;
+    padding: 5px;
+    flex-direction: column;
+}
+.container .star-width input{
+    display: none;
+}
+.star-width label{
+    color: black;
+    font-size: 40px;
+    padding: 5px;
+    float: right;
+}
+
+input:checked ~ label{
+    color: green;
+}
+input#rate-5:checked ~ label{
+    color: green;
+    text-shadow: 0 0 5px gray;
+}
+#rate-1:checked ~ header::before{
+    content: "Poor";
+}
+#rate-2:checked ~ header::before{
+    content: "Fair";
+}
+#rate-3:checked ~ header::before{
+    content: "Good";
+}
+#rate-4:checked ~ header::before{
+    content: "Very Good";
+}
+#rate-5:checked ~ header::before{
+    content: "Excellent";
+}
+.container form{
+    display: none;
+}
+input:checked ~ form{
+    display: block;
+}
+header{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin :5px 0 20px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
